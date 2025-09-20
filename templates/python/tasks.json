@@ -1,0 +1,45 @@
+{
+  // Common Python tasks
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "venv: create",
+      "type": "shell",
+      "command": "python3 -m venv .venv",
+      "problemMatcher": []
+    },
+    {
+      "label": "venv: upgrade pip",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/python -m pip install --upgrade pip",
+      "problemMatcher": [],
+      "dependsOn": "venv: create"
+    },
+    {
+      "label": "install: requirements.txt",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/pip install -r requirements.txt",
+      "problemMatcher": []
+    },
+    {
+      "label": "test: pytest",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/pytest -q",
+      "group": "test",
+      "problemMatcher": ["$pytest-python"]
+    },
+    {
+      "label": "lint: ruff",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/ruff check .",
+      "problemMatcher": []
+    },
+    {
+      "label": "format: ruff",
+      "type": "shell",
+      "command": "${workspaceFolder}/.venv/bin/ruff format .",
+      "problemMatcher": []
+    }
+  ]
+}
+

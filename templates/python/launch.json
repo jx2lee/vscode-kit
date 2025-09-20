@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+    },
+    {
+      "name": "Python: Module",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "${input:moduleName}",
+      "console": "integratedTerminal",
+    }
+  ],
+  "inputs": [
+    {
+      "id": "moduleName",
+      "type": "promptString",
+      "description": "Module to run (e.g. package.module)",
+      "default": ""
+    }
+  ]
+}
+

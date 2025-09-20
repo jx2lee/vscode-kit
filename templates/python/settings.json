@@ -1,0 +1,15 @@
+{
+  // Basic Python workspace settings
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestArgs": [
+    "-q"
+  ],
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "ruff.organizeImports": true
+}
+

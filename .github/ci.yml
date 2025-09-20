@@ -1,0 +1,1 @@
+# main 브랜치로 Push 된 경우 cargo fmt, clippy, test, build 실행
